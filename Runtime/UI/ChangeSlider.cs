@@ -12,8 +12,8 @@ namespace AAA.GlobalVariables.UI
     {
         [SerializeField] protected bool useImage;
 
-        [Self][SerializeField] [ShowIf("useImage")] protected Image image;
-        [Self][SerializeField] [HideIf("useImage")] protected Slider slider;
+        [FromSelf][SerializeField] [ShowIf("useImage")] protected Image image;
+        [FromSelf][SerializeField] [HideIf("useImage")] protected Slider slider;
 
         public virtual void SetSliderProgress(RangeValue newValue)
         {

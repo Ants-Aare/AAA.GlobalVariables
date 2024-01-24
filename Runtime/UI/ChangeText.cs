@@ -25,7 +25,7 @@ namespace AAA.GlobalVariables.UI
         [BoxGroup("GroupSuffix")] [SerializeField] [ShowIf("useSuffix")]
         private string suffix;
 
-        [Self] [SerializeField] private TextMeshProUGUI textField;
+        [FromSelf] [SerializeField] private TextMeshProUGUI textField;
 
         public virtual void SetText(float value)
         {
