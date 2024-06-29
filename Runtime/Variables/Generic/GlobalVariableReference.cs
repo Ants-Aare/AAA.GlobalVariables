@@ -21,24 +21,20 @@ namespace AAA.GlobalVariables.Variables
         {
             get
             {
-#if UNITY_EDITOR
                 if (!UseConstant && Variable == null)
                 {
                     Debug.LogError("The Variable was not set. The Constant Value will be used instead.");
                     UseConstant = true;
                 }
-#endif
                 return UseConstant ? ConstantValue : Variable.Value;
             }
             set
             {
-#if UNITY_EDITOR
                 if (!UseConstant && Variable == null)
                 {
                     Debug.LogError("The Variable was not set. The Constant Value will be used instead.");
                     UseConstant = true;
                 }
-#endif
                 if (UseConstant)
                 {
                     var hasChanged = !ConstantValue.Equals(value);
